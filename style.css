@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Root */
+:root {
+    --main-font: #8b8b8b;
+    --main-orange: #ff9650;
+}
+
+/* Main */
+main {
+    position: relative;
+    height: 100dvh;
+    width: 100dvw;
+    background-image: url("images/dark-background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main > .header-info {
+    position: relative;
+    inset: 2rem 4vw;
+    color: var(--main-font);
+}
+
+.header-info > p {
+    animation: showDown 1s;
+    font-weight: 600;
+    color: #464646;
+}
+
+.header-info > h1 {
+    animation: showUp 2s;
+}
+
+/* Navigation Styling */
+nav > li {
+    position: absolute;
+    display: grid;
+    height: 50vh;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 2rem;
+    /* background-color: #a2a2a2; */
+    width: 10vw;
+    top: 10rem;
+    right: 16vw;
+    transition: color 0.5s ease;
+    animation: fromRightIn 1s ease-in 0.4s;
+}
+
+li > a {
+    color: var(--main-font);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+     /* add transition property for text-decoration */
+}
+
+li > a:hover {
+    color: var(--main-orange);
+    text-decoration: underline;
+}
+
+#auto-type {
+    animation: showUp 3s ease-in;
+}
+
+/* About Me */
+.about-me {
+    position: absolute;
+    display: grid;
+    width: 40rem;
+    inset: 30vh 4vw;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+}
+
+.about-me > h1 {
+    margin-bottom: 12px;
+}
+
+.about {
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 2px solid #9d9d9d;
+    animation: fromRightIn 1.5s;
+}
+
+/* Dark Mode Switch */
+.theme-button {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    animation: showUp 1.5s linear;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 24px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 100%;
+  }
+  
+  input:checked + .slider {
+    background-color: #464646;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #464646;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+
+/* Light Theme */
+main.light-mode {
+    background: url("https://plus.unsplash.com/premium_photo-1677622678379-115b35bf27e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1489&q=80");
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Animating intro */
+@keyframes fromRightIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20vw);
+    }
+    60%, 90% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes showDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20vw);
+    }
+    60%, 90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media (width <= 768px) {
+    li > a {
+        font-size: 16px;
+        /* display: none; */
+    }
+
+    a:nth-child(1) {
+        display: none;
+    }
+
+    nav > li {
+        position: absolute;
+        display: grid;
+        width: fit-content;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+        /* background-color: #a2a2a2; */
+        top: calc(26vh + 2px);
+        left: 30vw;
+        z-index: 1;
+    }
+    
+
+    .about-me {
+        width: 90dvw;
+    }
+}
