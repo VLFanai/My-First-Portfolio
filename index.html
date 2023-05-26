@@ -8,35 +8,61 @@
     <title>Welcome</title>
 </head>
 <body>
+    <nav>
+        <h1 style="color: #fff">fanai<span style="color: #ff6700">.vl</span></h1>
+        <a href="#" id="blog">Blog</a>
+        <a href="#" id="works">Works</a>
+        <a href="#" id="contact">Contact</a>
+    </nav>
+
     <main>
-        <div class="header-info">
-            <p>Hello, my name is VL</p>
-            <h1 id="auto-type1"></h1>
-            <h2 style="color: var(--main-orange)" id="auto-type2"></h2>
+        <div class="main-container">
+            <div class="main-intro">
+                <p style="color: #c9c9c9">Hello, I am</p>
+            <h1 id="main-name" style="color: var(--secondary-font-color)">VL FANAI</h1>
+            <p style="color: #c9c9c9;">Junior web developer fusing creativity and coding to shape <br>immersive online journey</p>
+            </div>
+            <div class="learn-more">
+                <button>Learn More</button>
+            </div>
         </div>
-        <div class="theme-button">
-            <label class="switch">
-                <input type="checkbox" onchange="toggleTheme()" id="dark-mode-toggle">
-                <span class="slider"></span>
-              </label>
+
+        <section style="color: var(--secondary-font-color)" class="social-links">
+            <a id="facebook" href=""><img src="images/social-icons/facebook-2868.svg" alt=""></a>
+            <a id="instagram" href=""><img src="images/social-icons/black-instagram-logo-3496.svg" alt=""></a>
+            <a id="twitter" href=""><img src="images/social-icons/twitter-99.svg" alt=""></a>
+            <a id="linkedin" href=""><img src="images/social-icons/linkedin-logo-square-outline-15917.svg" alt=""></a>
+        </section>
+
+        <div class="eclipse-deco">
+            <svg id="ecllipse1" width="60" height="60" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="38" stroke="#FF6700" stroke-width="4"/>
+            </svg>
+            <svg id="ecllipse2" width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="38" stroke="#FF6700" stroke-width="4"/>
+            </svg>
+            <svg id="ecllipse3" width="120" height="120" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="38" stroke="#FF6700" stroke-width="4"/>
+            </svg>
+                                                            
+        <div class="lhs-deco">
+            <svg width="65" height="450" viewBox="0 0 85 489" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="38" y1="288.824" x2="37.1742" y2="488.823" stroke="#FF6700" stroke-width="2"/>
+<line y1="-1" x2="200" y2="-1" transform="matrix(0 -1 -1 0 37 200)" stroke="#FF6700" stroke-width="2"/>
+<path d="M15.625 260.497C12.9498 260.497 10.6712 259.769 8.78906 258.313C6.90696 256.845 5.46875 254.721 4.47443 251.939C3.48011 249.145 2.98295 245.772 2.98295 241.818C2.98295 237.888 3.48011 234.532 4.47443 231.751C5.48059 228.957 6.92472 226.826 8.80682 225.359C10.7008 223.879 12.9735 223.139 15.625 223.139C18.2765 223.139 20.5433 223.879 22.4254 225.359C24.3194 226.826 25.7635 228.957 26.7578 231.751C27.764 234.532 28.267 237.888 28.267 241.818C28.267 245.772 27.7699 249.145 26.7756 251.939C25.7812 254.721 24.343 256.845 22.4609 258.313C20.5788 259.769 18.3002 260.497 15.625 260.497ZM15.625 256.591C18.2765 256.591 20.3362 255.312 21.804 252.756C23.2718 250.199 24.0057 246.553 24.0057 241.818C24.0057 238.67 23.6683 235.988 22.9936 233.775C22.3307 231.561 21.3719 229.875 20.1172 228.714C18.8743 227.554 17.3769 226.974 15.625 226.974C12.9972 226.974 10.9434 228.271 9.46378 230.863C7.98414 233.443 7.24432 237.095 7.24432 241.818C7.24432 244.967 7.57576 247.642 8.23864 249.844C8.90152 252.045 9.8544 253.72 11.0973 254.869C12.352 256.017 13.8613 256.591 15.625 256.591Z" fill="#5C6D81"/>
+<path d="M35.0142 260V256.804L47.017 243.665C48.4257 242.126 49.5857 240.788 50.4972 239.652C51.4086 238.504 52.0833 237.427 52.5213 236.42C52.9711 235.402 53.196 234.337 53.196 233.224C53.196 231.946 52.8883 230.839 52.2727 229.904C51.669 228.969 50.8404 228.247 49.7869 227.738C48.7334 227.229 47.5497 226.974 46.2358 226.974C44.839 226.974 43.6198 227.264 42.5781 227.844C41.5483 228.413 40.7493 229.212 40.1811 230.241C39.6248 231.271 39.3466 232.479 39.3466 233.864H35.1562C35.1562 231.733 35.6475 229.863 36.63 228.253C37.6125 226.643 38.95 225.388 40.6428 224.489C42.3473 223.589 44.259 223.139 46.3778 223.139C48.5085 223.139 50.3965 223.589 52.0419 224.489C53.6873 225.388 54.9775 226.602 55.9126 228.129C56.8478 229.656 57.3153 231.354 57.3153 233.224C57.3153 234.562 57.0727 235.87 56.5874 237.148C56.1139 238.415 55.2853 239.83 54.1016 241.392C52.9297 242.943 51.3021 244.837 49.2188 247.074L41.0511 255.81V256.094H57.9545V260H35.0142ZM78.0717 223.636V260H73.6683V228.253H73.4553L64.5774 234.148V229.673L73.6683 223.636H78.0717Z" fill="white"/>
+</svg>
+
         </div>
         
-        <nav>
-            <li>
-                <a href="#" id="about" class="link">About</a>
-                <a href="#" id="services" class="link">Services</a>
-                <a href="#" id="blog" class="link">Blog</a>
-                <a href="#" id="projects" class="link">Projects</a>
-            </li>
-        </nav>
-
-        <div class="about-me">
-            <h1 style="color: var(--main-font)">About Me</h1>
-            <p class="about" style="color: var(--main-font)">Welcome to the world of freelance web development! I'm <span style="color: var(--main-orange)">VL Fanai</span>, a self-taught web developer from Mizoram, India. Currently pursuing a BSc degree at Lunglei Government College, I am dedicated to becoming a full-stack developer while focusing on front-end development. With a passion for coding and an eye for design, I specialize in building visually stunning and highly functional websites tailored to meet the unique needs of my clients. Alongside web development, I also enjoy drawing and singing, finding solace in peaceful environments. Despite being introverted, I am always eager to learn and explore new ideas. Excitingly, I have plans to launch a YouTube channel where I will share web development insights and showcase my artistic creations. Thank you for considering my services, and I look forward to collaborating with you to bring your ideas to life in the digital realm..</p>
         </div>
     </main>
 
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <footer>
+        <h2 style="color: var(--primary-font-color)">Home</h2>
+        <p style="color: var(--highlight-font-color)" id="arrow">></p>
+    </footer>
+    <!-- Script -->
     <script src="main.js"></script>
 </body>
 </html>
