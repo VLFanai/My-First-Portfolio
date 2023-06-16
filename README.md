@@ -1,10 +1,10 @@
 Live Demo
-You can visit the live website at www.mywebsite.com.
+You can visit the live website at www.vlfanai.github.io
 
-Local Setup
+##Local Setup
 To set up the project locally, follow these steps:
 
-Clone the repository using git clone https://github.com/myusername/mywebsite.git.
+Clone the repository using git clone https://github.com/VLFanai/vlfanai.github.io
 Open the index.html file in your browser.
 Technologies Used
 HTML
