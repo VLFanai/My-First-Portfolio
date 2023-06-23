@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="images/panda.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/icons/panda.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Welcome</title>
 </head>
@@ -43,7 +45,7 @@
                 </svg>
                                                                 
             <div style="z-index: -9;" class="lhs-deco">
-                <svg width="65" height="450" viewBox="0 0 85 489" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="70" viewBox="0 0 85 489" fill="none" xmlns="http://www.w3.org/2000/svg">
     <line x1="38" y1="288.824" x2="37.1742" y2="488.823" stroke="#FF6700" stroke-width="2"/>
     <line y1="-1" x2="200" y2="-1" transform="matrix(0 -1 -1 0 37 200)" stroke="#FF6700" stroke-width="2"/>
     <path d="M15.625 260.497C12.9498 260.497 10.6712 259.769 8.78906 258.313C6.90696 256.845 5.46875 254.721 4.47443 251.939C3.48011 249.145 2.98295 245.772 2.98295 241.818C2.98295 237.888 3.48011 234.532 4.47443 231.751C5.48059 228.957 6.92472 226.826 8.80682 225.359C10.7008 223.879 12.9735 223.139 15.625 223.139C18.2765 223.139 20.5433 223.879 22.4254 225.359C24.3194 226.826 25.7635 228.957 26.7578 231.751C27.764 234.532 28.267 237.888 28.267 241.818C28.267 245.772 27.7699 249.145 26.7756 251.939C25.7812 254.721 24.343 256.845 22.4609 258.313C20.5788 259.769 18.3002 260.497 15.625 260.497ZM15.625 256.591C18.2765 256.591 20.3362 255.312 21.804 252.756C23.2718 250.199 24.0057 246.553 24.0057 241.818C24.0057 238.67 23.6683 235.988 22.9936 233.775C22.3307 231.561 21.3719 229.875 20.1172 228.714C18.8743 227.554 17.3769 226.974 15.625 226.974C12.9972 226.974 10.9434 228.271 9.46378 230.863C7.98414 233.443 7.24432 237.095 7.24432 241.818C7.24432 244.967 7.57576 247.642 8.23864 249.844C8.90152 252.045 9.8544 253.72 11.0973 254.869C12.352 256.017 13.8613 256.591 15.625 256.591Z" fill="#5C6D81"/>
@@ -67,7 +69,7 @@
             <h1>VL Fanai</h1>
             <h2>UI/UX Designer</h2>
             <p>As a self-taught freelance web developer, I'm passionate about creating visually stunning and functional websites. With a keen eye for design and a commitment to continuous learning, I tailor each project to meet your unique needs. Let's collaborate and bring your digital ideas to life!</p>
-            <button>Download CVV</button>
+            <a href="files/document/cv_sample2.pdf" download="">Download CVV</a>
         </div>
 
         <footer>
@@ -79,23 +81,25 @@
 
     <section style="display: none;" id="blog-section">
         <div class="info">
-            <h1>How I use AI generated arts to teach myself to draw better potrait</h1>
-            <button>Read more</button>
+          <h1 id="blog-title"></h1>
+          <a target="_blank" id="read-more-btn" class="read-more-button">Read More</a>
+
         </div>
-        
+      
         <div class="article-image">
-            <div style="z-index: 1;" class="navigation-buttons">
-                <button><</button>
-                <button>></button>
-            </div>
-           <div class="image" style="width: 65dvw; height: calc(89dvh + 5px);">
-            <img src="images/thumbnails/illustration.png" alt="my-drawing" style="object-fit: cover; width: 100%; height: 100%;">
-           </div>
-            <div class="article-intro">
-                <h3 style="font-size: 2rem; font-weight: 300;">02</h3>
-            <p>"Unlocking my artistic potential, I harness AI-generated art to <br>  enhance my potrait-drawing skills and explore boundless creativity."</p>
-            </div>
+          <div style="z-index: 1;" class="navigation-buttons">
+            <button id="previous-btn"><i class="fas fa-chevron-left"></i></button>
+            <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <div class="image">
+            <img>
+          </div>
+          <div class="article-intro">
+            <h3 id="blog-number" style="font-size: 2rem; font-weight: 300;"></h3>
+            <p id="blog-description"></p>
+          </div>
         </div>
+      
 
         <footer>
             <p style="color: var(--highlight-font-color)" id="arrow">--</p>
@@ -103,24 +107,46 @@
             <p style="color: var(--highlight-font-color)" id="arrow">--</p>
         </footer>
     </section>
-
-    <section style="display: none;" id="projects-section">
-        <div class="image-container">
-            <img title="project-responsive_site" id="img1" width="350" height="200" src="images/thumbnails/The Most Popular WordPress Themes In The World.png" alt="">
-            <img title="project-calculator" id="img2" width="500" height="270" src="images/thumbnails/Calculator.png" alt="">
-            <img title="project-starbuck-clone" id="img3" width="350" height="200" src="images/thumbnails/Starbucks web concept Home page Design.png" alt="">
-        </div>
-        <div class="image-description">
-            <h1 style="color: var(--secondary-font-color);">NEUMORPHISM CALCULATOR</h1>
+    <section id="projects-section">
+      <div class="cover-flow">
+        <div class="slide">
+          <img title="project-responsive_site" id="img1" width="350" height="200" src="images/thumbnails/The Most Popular WordPress Themes In The World.png" alt="">
+          <div class="image-description">
+            <a style="text-decoration: none;" href="#"><h1 style="color: var(--secondary-font-color);">NEUMORPHISM CALCULATOR</h1></a>
             <p style="color: var(--secondary-font-color);">Crafted in a sleek neumorphic style, experience the elegance of a fully functional calculator that simplifies your calculations effortlessly.</p>
+          </div>
+          <button class="view-project">View Project</button>
         </div>
-        <button id="view-project">View Project</button>
+        <div class="slide">
+          <img title="project-calculator" id="img2" width="500" height="270" src="images/thumbnails/Calculator.png" alt="">
+          <div class="image-description">
+            <h1 style="color: var(--secondary-font-color);">CALCULATOR</h1>
+            <p style="color: var(--secondary-font-color);">Perform basic calculations with this simple calculator.</p>
+          </div>
+          <button class="view-project">View Project</button>
+        </div>
+        <div class="slide">
+          <img title="project-starbuck-clone" id="img3" width="350" height="200" src="images/thumbnails/Starbucks web concept Home page Design.png" alt="">
+          <div class="image-description">
+            <h1 style="color: var(--secondary-font-color);">STARBUCKS CLONE</h1>
+            <p style="color: var(--secondary-font-color);">Explore a web concept home page design inspired by Starbucks.</p>
+          </div>
+          <button class="view-project">View Project</button>
+        </div>
+      </div>
+    
+      <div class="navigation-buttons">
+        <button id="previous-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    
 
         <footer>
-            <p style="color: var(--highlight-font-color)" id="arrow">--</p>
-            <h2 style="color: var(--primary-font-color)">Projects</h2>
-            <p style="color: var(--highlight-font-color)" id="arrow">--</p>
-        </footer>
+          <p style="color: var(--highlight-font-color)" id="arrow">--</p>
+          <h2 style="color: var(--primary-font-color)">Projects</h2>
+          <p style="color: var(--highlight-font-color)" id="arrow">--</p>
+      </footer>    
+        
     </section>
 
     <section style="display: none;" id="contact-section">
@@ -141,9 +167,9 @@
         <div class="get-in-touch">
             <h1>Get in Touch</h1>
             <div class="input-field">
-              <input style="background: transparent; border: none; border-bottom: 0.5px solid white; color: var(--primary-font-color);" type="text" placeholder="Your name" required>
+              <input id="message-input" style="background: transparent; border: none; border-bottom: 0.5px solid white; color: var(--primary-font-color);" type="text" placeholder="Your name" required>
               <input style="background: transparent; border: none; border-bottom: 0.5px solid white; color: var(--primary-font-color);" type="email" placeholder="Your email" required>
-              <input id="message-input" style="background: transparent; border: none; border-bottom: 0.5px solid white; color: var(--primary-font-color);" type="text" placeholder="Your message" required>
+              <input style="background: transparent; border: none; border-bottom: 0.5px solid white; color: var(--primary-font-color);" type="text" placeholder="Your message" required>
             </div>
             <button onclick="submitForm()" type="submit">Send Message</button>
           </div>
@@ -156,11 +182,11 @@
             }
           </script>
 
-<footer>
-    <p style="color: var(--highlight-font-color)" id="arrow">--</p>
-    <h2 style="color: var(--primary-font-color)">Contact</h2>
-    <p style="color: var(--highlight-font-color)" id="arrow">--</p>
-</footer>
+          <footer>
+              <p style="color: var(--highlight-font-color)" id="arrow">--</p>
+              <h2 style="color: var(--primary-font-color)">Contact</h2>
+              <p style="color: var(--highlight-font-color)" id="arrow">--</p>
+          </footer>
           
     </section>
 
