@@ -117,25 +117,51 @@ updateContent();
 
 
 // Project Section Functions
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.getElementById('previous-btn');
-const nextBtn = document.getElementById('next-btn');
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function() {
+  const carousel = document.querySelector(".carousel");
+  const prevButton = document.querySelector(".prev-button");
+  const nextButton = document.querySelector(".next-button");
+  const dotIndicators = document.querySelector(".dot-indicators");
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.style.transform = `rotateY(${(i - index) * 45}deg) translateZ(200px)`;
+  prevButton.addEventListener("click", function() {
+    carousel.scrollBy({
+      left: -carousel.offsetWidth,
+      behavior: "smooth"
+    });
   });
-}
 
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
+  nextButton.addEventListener("click", function() {
+    carousel.scrollBy({
+      left: carousel.offsetWidth,
+      behavior: "smooth"
+    });
+  });
+
+  carousel.addEventListener("scroll", function() {
+    const slideIndex = Math.round(carousel.scrollLeft / carousel.offsetWidth);
+    updateDotIndicators(slideIndex);
+  });
+
+  function updateDotIndicators(currentIndex) {
+    const slides = carousel.getElementsByClassName("slide");
+    const dotIndicatorContainer = document.querySelector(".dot-indicators");
+
+    dotIndicatorContainer.innerHTML = "";
+
+    for (let i = 0; i < slides.length; i++) {
+      const dot = document.createElement("span");
+      dot.classList.add("dot-indicator");
+      if (i === currentIndex) {
+        dot.classList.add("active-dot");
+      }
+      dot.addEventListener("click", function() {
+        carousel.scroll({
+          left: i * carousel.offsetWidth,
+          behavior: "smooth"
+        });
+      });
+      dotIndicatorContainer.appendChild(dot);
+    }
+  }
 });
 
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-});
-
-showSlide(currentIndex);
