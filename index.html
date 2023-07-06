@@ -13,10 +13,14 @@
 </head>
 <body>
     <nav>
-        <h1 id="home-link" href="#" style="cursor: pointer;color: #fff;">fanai<span style="color: #ff6700">.vl</span></h1>
-        <a href="#" id="blog-link">Blog</a>
-        <a href="#" id="projects-link">Works</a>
-        <a href="#" id="contact-link">Contact</a>
+        <a class="link" id="home-link" href="#" style="cursor: pointer;color: #fff;"><h3 class="nav">fanai<span style="color: #ff6700">.vl</span></h3>
+        <img class="icon" src="images/icons/home.png" alt=""></a>
+        <a class="link" href="#" id="blog-link"><h3 class="nav">Blog</h3>
+        <img src="images/icons/blog-pencil.png" alt=""></a>
+        <a class="link" href="#" id="projects-link"><h3 class="nav">Works</h3>
+        <img src="images/icons/diagram-project.png" alt=""></a>
+        <a class="link" href="#" id="contact-link"><h3 class="nav">Contact</h3>
+        <img src="images/icons/headset.png" alt=""></a>
     </nav>
 
     <section id="home-section">
@@ -70,7 +74,7 @@
             <h1>VL Fanai</h1>
             <h2>UI/UX Designer</h2>
             <p>As a self-taught freelance web developer, I'm passionate about creating visually stunning and functional websites. With a keen eye for design and a commitment to continuous learning, I tailor each project to meet your unique needs. Let's collaborate and bring your digital ideas to life!</p>
-            <a href="files/document/cv_sample2.pdf" download="">Download CV</a>
+            <a id="download-cv" href="files/document/cv_sample2.pdf" download="">Download CV</a>
         </div>
 
         <footer>
@@ -80,11 +84,10 @@
         </footer>
     </section>
 
-    <section style="display: none;" id="blog-section">
+    <section style="display: none;" id="projects-section">
         <div class="info">
           <h1 id="blog-title"></h1>
-          <a target="_blank" id="read-more-btn" class="read-more-button">Read More</a>
-
+          <a target="_blank" id="read-more-btn" class="read-more-button">View Project</a>
         </div>
       
         <div class="article-image">
@@ -109,32 +112,32 @@
         </footer>
     </section>
 
-    <section id="projects-section">
+    <section style="display: none;" id="blog-section">
       <div class="carousel-container">
         <div class="carousel">
           <div class="slide">
-            <img src="images/thumbnails/Screenshot 2023-06-25 9.47.02 PM.png" alt="">
             <div class="caption">
-              <h2>Simple Typing Animation</h2>
-              <p>Typing Animation with pure css</p>
-              <a target="_blank" href="https://codepen.io/VL_Fanai/pen/RwYpXpY">View Project</a>
+              <h2>Elevating my Portrait Drawing Skills through AI-Generated Art</h2>
+              <p>"Unlocking my artistic potential, I harness AI-generated art to enhance my portrait-drawing skills and explore boundless creativity."</p>
+              <a target="_blank" href="https://vl-fanai.blogspot.com/2023/06/elevating-my-portrait-drawing-skills.html">Read More</a>
             </div>
+            <img src="images/thumbnails/illustration.png" alt="">
           </div>
           <div class="slide">
+            <div class="caption">
+              <h2>Starting a Blog for Reflection and Accountability</h2>
+              <p>"Overcoming Procrastination and Embracing Imperfection"</p>
+              <a target="_blank" href="https://vl-fanai.blogspot.com/2023/04/why-i-finally-decided-to-start-writing.html">Read More</a>
+            </div>
             <img src="https://i.pinimg.com/474x/75/d2/16/75d216170fe3f3950e2d3593309555f5.jpg" alt="Image 2">
-            <div class="caption">
-              <h2>Title 2</h2>
-              <p>Caption 2</p>
-              <a href="https://in.pinterest.com/">View Project</a>
-            </div>
           </div>
           <div class="slide">
-            <img src="https://i.pinimg.com/474x/a3/2e/91/a32e916ea19551c25878600312c5dd8b.jpg" alt="Image 3">
             <div class="caption">
-              <h2>Title 3</h2>
-              <p>Caption 3</p>
-              <a href="">View Project</a>
+              <h2>Glowing Up and Getting My Life Together: A Personal Journey</h2>
+              <p>"This is the third blog post description."</p>
+              <a target="_blank" href="https://vl-fanai.blogspot.com/2023/04/ai-will-not-replacr-your-job-people-who.html">Read More</a>
             </div>
+            <img src="https://i.pinimg.com/474x/a3/2e/91/a32e916ea19551c25878600312c5dd8b.jpg" alt="Image 3">
           </div>
           <!-- Add more slide divs as needed -->
         </div>
