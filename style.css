@@ -523,7 +523,7 @@ opacity: 0.8;
 }
 
 /* Mobile View */
-@media (width < 800px) {
+@media (width < 821px) {
   body {
     background: linear-gradient(269deg, rgba(151, 230, 255, 0.06) 0%, rgba(151, 230, 255, 0.00) 100%), linear-gradient(133deg, rgba(106, 106, 106, 0.05) 0%, rgba(76, 76, 76, 0.00) 100%), #212121;
     overflow: hidden;
@@ -718,7 +718,6 @@ opacity: 0.8;
   }
   .caption {
     font-size: 4vw;
-    border: 2px solid green;
     position: absolute;
     display: flex;
     top: calc(60vh + 15px);
