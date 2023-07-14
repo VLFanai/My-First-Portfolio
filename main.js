@@ -60,10 +60,10 @@ window.addEventListener('load', function() {
 // Define an array of blog posts
 const blogPosts = [
   {
-    title: 'Elevating my Portrait Drawing Skills through AI-Generated Art',
-    description: '"Unlocking my artistic potential, I harness AI-generated art to enhance my portrait-drawing skills and explore boundless creativity."',
-    imagePath: '',
-    link: 'https://codepen.io/VL_Fanai/pen/RwYpXpY'
+    title: 'Bootstrap Shopping Website',
+    description: '"Elegant and fully Responsive Online Fashion Site using Bootstrap 5."',
+    imagePath: 'images/thumbnails/bootstrap-project-1.2-thumbnail.png',
+    link: 'projects_folder/projects-bootstrap/shopping-site/site.html'
   },
   {
     title: '',
