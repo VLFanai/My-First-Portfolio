@@ -1,0 +1,20 @@
+.pinterest-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.col-md-6 img {
+    max-height: fit-content;
+    border-radius: 12px;
+    margin: 0;
+    position: relative;
+}
+.masonry img {
+    display: grid;
+    margin-top: 2rem;
+}
+
+.category-image {
+    display: none;
+  }
