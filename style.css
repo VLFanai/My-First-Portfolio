@@ -500,7 +500,7 @@ footer > p {
 }
 
 /* Medium Screens */
-@media (max-width: 1080px) {
+@media (max-width: 800px) {
   body {
     background: linear-gradient(269deg, rgba(151, 230, 255, 0.06) 0%, rgba(151, 230, 255, 0.00) 100%), linear-gradient(133deg, rgba(106, 106, 106, 0.05) 0%, rgba(76, 76, 76, 0.00) 100%), #212121;
     overflow: hidden;
