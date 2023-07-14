@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Taking Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-2xl font-bold mb-4">Note Taking Website</h1>
+
+    <textarea id="note" class="w-full h-32 p-2 mb-4 border border-gray-300" placeholder="Type your note here..."></textarea>
+
+    <input type="file" id="image" class="mb-4">
+
+    <button id="saveButton" class="bg-blue-500 text-white px-4 py-2 rounded">Save</button>
+
+    <div id="notesContainer" class="mt-8"></div>
+  </div>
+
+  <script>
+    // Retrieve saved notes from localStorage
+    const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
+
+    // Render saved notes on the page
+    function renderNotes() {
+      const notesContainer = document.getElementById('notesContainer');
+      notesContainer.innerHTML = '';
+
+      savedNotes.forEach((note) => {
+        const noteDiv = document.createElement('div');
+        noteDiv.classList.add('bg-gray-100', 'p-4', 'mb-4');
+
+        const noteText = document.createElement('p');
+        noteText.textContent = note.content;
+
+        const noteImage = document.createElement('img');
+        noteImage.src = note.imageURL;
+        noteImage.classList.add('max-w-full', 'h-auto', 'mt-4');
+
+        noteDiv.appendChild(noteText);
+        noteDiv.appendChild(noteImage);
+        notesContainer.appendChild(noteDiv);
+      });
+    }
+
+    // Save note when the save button is clicked
+    document.getElementById('saveButton').addEventListener('click', () => {
+      const noteContent = document.getElementById('note').value;
+      const noteImage = document.getElementById('image').files[0];
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const note = {
+          content: noteContent,
+          imageURL: reader.result
+        };
+
+        savedNotes.push(note);
+        localStorage.setItem('notes', JSON.stringify(savedNotes));
+        renderNotes();
+      };
+
+      if (noteImage) {
+        reader.readAsDataURL(noteImage);
+      } else {
+        const note = {
+          content: noteContent,
+          imageURL: null
+        };
+
+        savedNotes.push(note);
+        localStorage.setItem('notes', JSON.stringify(savedNotes));
+        renderNotes();
+      }
+
+      document.getElementById('note').value = '';
+      document.getElementById('image').value = '';
+    });
+
+    // Initial rendering of saved notes
+    renderNotes();
+  </script>
+</body>
+</html>
