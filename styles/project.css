@@ -9,11 +9,11 @@
   #projects-section .article-image {
     position: relative;
     right: 0;
-    width: 700px;
+    width: fit-content;
     height: 90dvh;
   }
   #projects-section img {
-    width: 700px;
+    width: 60vw;
     height: 90dvh;
     object-fit: cover;
     object-position: center;

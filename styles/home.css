@@ -9,17 +9,17 @@
   
   #home-section .main-intro {
     display: grid;
-    max-width: 895px;
+    max-width: max-content;
     margin-bottom: 1rem;
   }
   
   .main-intro h1 {
-    font-size: 150px;
+    font-size: clamp(150px, 15rem, 300px);
     margin-top: -12px;
   }
   
   .main-intro p {
-    font-size: clamp(0.5rem, 16px, 32px);
+    font-size: clamp(1rem, 20px, 50px);
   }
   
   .learn-more button {

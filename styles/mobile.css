@@ -198,9 +198,8 @@
       position: relative;
     }
     #blog-section img {
-      /* opacity: 0.2; */
       position: relative;
-      top: 0;
+      top: -10vh;
       min-width: 99vw;
       border-bottom-right-radius: 32px;
       border-bottom-left-radius: 32px;

@@ -41,6 +41,7 @@
   }
   
   .caption {
+    font-size: clamp(14px, 4vw, 24px);
     display: flex;
     height: fit-content;
     flex-direction: column;
