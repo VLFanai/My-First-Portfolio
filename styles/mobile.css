@@ -20,11 +20,6 @@
       place-content: center;
       grid-template-columns: repeat(4, 1fr);
     }
-    
-    
-    nav #home-link {
-      margin-right: 20px;
-    }
   
     nav h3 {
       display: none;
@@ -33,6 +28,10 @@
     nav img {
       width: 32px;
       display: block;
+    }
+
+    nav .icon {
+        margin-right: 28px;
     }
     /* Apply the "hopUp" animation to nav img on hover, click, and focus */
     nav img:hover,
