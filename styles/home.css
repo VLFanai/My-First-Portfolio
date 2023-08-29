@@ -1,0 +1,110 @@
+#home-section .main-container {
+    width: 100dvw;
+    height: 100dvh;
+    position: absolute;
+    top: 0;
+    display: grid;
+    place-content: center;
+  }
+  
+  #home-section .main-intro {
+    display: grid;
+    max-width: 895px;
+    margin-bottom: 1rem;
+  }
+  
+  .main-intro h1 {
+    font-size: 150px;
+    margin-top: -12px;
+  }
+  
+  .main-intro p {
+    font-size: clamp(0.5rem, 16px, 32px);
+  }
+  
+  .learn-more button {
+    background: transparent;
+    border: 1px solid var(--secondary-font-color);
+    color: var(--primary-font-color);
+    padding: 6px;
+    z-index: 1;
+    transition: all 0.2s ease-in;
+  }
+  
+  .learn-more button:hover {
+    background: var(--secondary-font-color);
+    color: #212121;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  
+  
+  /* Links */
+  .social-links {
+    width: min-content;
+    position: absolute;
+    bottom: 2vh;
+    left: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+  }
+  
+  .social-links img {
+    width: 25px;
+    backdrop-filter: multiply;
+    filter: brightness(0) invert(1);
+  }
+  
+  #instagram {
+    filter: brightness(0.2) invert(1); /* Adjust the brightness value as needed */
+  }
+  
+  /* Decorations */
+  #ecllipse1, #ecllipse2, #ecllipse3 {
+    position: absolute;
+    top: 0;
+  }
+  
+  #ecllipse1 {
+    right: 4rem;
+    top: 16vh;
+  }
+  
+  #ecllipse2 {
+    right: 6rem;
+    top: 60%;
+  }
+  
+  #ecllipse3 {
+    right: 30%;
+    top: 70vh;
+  }
+  
+  .lhs-deco {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    left: 5vw;
+  }
+  
+  
+  /* Footer */
+  footer {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 10px;
+    bottom: 24px;
+    transform: rotate(90deg);
+  }
+  
+  footer > h2 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  footer > p {
+    font-size: 32px;
+    font-weight: 400;
+  }
+  

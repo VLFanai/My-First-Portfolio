@@ -1,0 +1,131 @@
+/* Blog Section */
+#blog-section {
+    position: relative;
+    display: grid;
+    place-content: center;
+  }
+  
+  .carousel-container {
+    height: 80dvh;
+    position: relative;
+    max-width: 100vw; /* Adjust the maximum width as needed */
+    /* margin-top: 5vh; */
+    /* margin: auto; */
+  }
+  
+  
+  .carousel {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    background-position: center;
+    overflow-y: hidden;
+    background: transparent;
+  }
+  
+  .slide {
+    min-width: 100vw;
+    height: 80vh;
+    scroll-snap-align: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .slide img {
+    object-fit: cover;
+    object-position: center;
+    width: 55vw;
+    height: 80vh;
+  }
+  
+  .caption {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    position: relative;
+    top: 30vh;
+    left: 4rem;
+    right: 0;
+    color: #fff;
+    padding: 10px;
+    text-align: start;
+  }
+  
+  .caption a {
+    margin-top: 16px;
+    width: max-content;
+    padding: .5rem 1rem;
+    border: 1.5px solid var(--primary-font-color);
+    color: var(--primary-font-color);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease; /* Add smooth transition */
+  }
+  
+  .caption a:hover {
+    border: none;
+    background-color: #fff;
+    color: #212121;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 40%;
+    width: 100dvw; 
+    text-align: center;
+  }
+  
+  .prev-button,
+  .next-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f1f1f100;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    color: var(--primary-font-color);
+    background-color: #dddddd44;
+  }
+  
+  .material-symbols-outlined {
+    filter: invert(90deg);
+    font-size: 3rem;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .material-symbols-outlined:hover {
+    color: #ff8d41;
+  }
+  
+  .dot-indicators {
+    position: absolute;
+    left: 50vw;
+    bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot-indicator {
+    width: 6px;
+    height: 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+  
+  .active-dot {
+    transform: scale(1.5);
+    background-color: var(--highlight-font-color);
+  }
+  
+  
