@@ -542,6 +542,7 @@ opacity: 0.8;
     gap: 2vw;
     place-content: center;
     grid-template-columns: repeat(4, 1fr);
+    z-index: 9;
   }
   
   
@@ -556,8 +557,29 @@ opacity: 0.8;
   nav img {
     width: 30px;
     display: block;
-
   }
+
+   /* Apply the "hopUp" animation to nav img on hover, click, and focus */
+   nav img:hover,
+   nav img:active,
+   nav img:focus {
+     animation: hopUp .3s linear;
+   }
+ 
+   @keyframes hopUp {
+     from {
+       transform: translateY(0); /* Starting position or style */
+     }
+     30% {
+       transform: translateY(-7px); /* Ending position or style */
+     }
+     60% {
+       transform: translateY(-4px);
+     }
+     to {
+       transform: translateY(0);
+     }
+   }
 
   footer {
     display: none;
@@ -706,7 +728,7 @@ opacity: 0.8;
     position: relative;
     top: 0;
     min-width: 99vw;
-    max-height: 62vh;
+    max-height: 60vh;
     border-bottom-right-radius: 32px;
     border-bottom-left-radius: 32px;
   }
@@ -720,12 +742,16 @@ opacity: 0.8;
     font-size: 4vw;
     position: absolute;
     display: flex;
-    top: calc(60vh + 15px);
+    top: 50dvh;
     left: 0;
     z-index: 9;
   }
+  .caption h2 {
+    font-variant: small-caps;
+      text-shadow: 0px 0px 15px #000, 1px -1px 3px #000, -1px 1px 3px #000, 1px 1px 3px #000;
+  }
   .caption a {
-    font-size: clamp(0.5rem, 16px, 5vw);
+    font-size: calc(2vw + 10px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -734,11 +760,12 @@ opacity: 0.8;
     color: #212121;
     margin: 0 auto; /* Center horizontally */
     margin-top: 1rem;
-    padding: 12px 30vw; /* Adjust padding as needed */
+    padding: 3vh 30vw; /* Adjust padding as needed */
     height: 30px;
     flex-shrink: 0;
     position: relative;
-    top: 12px;
+    bottom: 0;
+    z-index: 1;
   }
   
   .dot-indicators {
