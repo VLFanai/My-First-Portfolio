@@ -8,7 +8,7 @@
   }
   #projects-section .article-image {
     position: relative;
-    right: 0;
+    left: 50%;
     width: fit-content;
     height: 90dvh;
   }
@@ -65,7 +65,8 @@
     padding: 1rem 2rem;
     color: #fff;
     bottom: 5vh;
-    position: absolute;
+    position: fixed;
+    border: 2px solid red;
   }
   
   

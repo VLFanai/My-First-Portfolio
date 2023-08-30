@@ -154,12 +154,3 @@ opacity: 0.8;
     display: none;
   }
 }
-
-@media (width > 500px) {
-  nav img {
-    display: none;
-  }
-  #about-social-links {
-    display: none;
-  }
-}
