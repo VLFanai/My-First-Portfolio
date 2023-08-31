@@ -457,37 +457,43 @@ footer > p {
   color: var(--secondary-font-color);
 }
 
+.get-in-touch h1 {
+  font-size: min(54px, 3vw);
+}
+
 #contact-section .contact-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
   color: var(--primary-font-color);
 }
 
 .left-block {
-  font-size: clamp(18px, 4.2vw, 26px);
+  font-size: min(32px, 2vw);
   text-align: left;
 }
 
-.middlle-block {
+.middle-block {
+  font-size: min(28px, 1.75vw);
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-.middlle-block p {
+.middle-block p {
+  font-size: min(32px, 2vw);
   color: var(--primary-font-color);
 }
 
-.right-block {
+.right-block img {
   border: 1px solid red;
-  height: 70dvh;
-  max-width: 40vw;
+  height: 70vh;
+  max-width: 34vw;
   object-fit: cover;
   object-position: center;
 }
 
-.right-block img {
-  object-fit: cover;
-  object-position: center;
-}
 
 .phone span,
 .email span,
