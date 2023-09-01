@@ -6,6 +6,7 @@ window.addEventListener('load', function() {
   var blogLink = document.getElementById('blog-link');
   var projectsLink = document.getElementById('projects-link');
   var contactLink = document.getElementById('contact-link');
+  var contactMeLink = document.getElementById('cta-button');
 
   // Get all the sections
   var homeSection = document.getElementById('home-section');
@@ -39,6 +40,10 @@ window.addEventListener('load', function() {
   });
 
   contactLink.addEventListener('click', function() {
+    showSection(contactSection);
+  });
+
+  contactMeLink.addEventListener('click', function() {
     showSection(contactSection);
   });
 

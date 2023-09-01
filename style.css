@@ -82,24 +82,25 @@ a:hover {
 
 #home-section .main-intro {
   display: grid;
-  max-width: 895px;
+  max-width: max-content;
   margin-bottom: 1rem;
 }
 
 .main-intro h1 {
-  font-size: 150px;
+  font-size: min(5.25vw + 18px, 16rem);
   margin-top: -12px;
 }
 
 .main-intro p {
-  font-size: clamp(0.5rem, 16px, 32px);
+  font-size: min(1vw + 12px, 4rem);
 }
 
 .learn-more button {
+  font-size: min(1vw + 12px, 4rem);
   background: transparent;
-  border: 1px solid var(--secondary-font-color);
+  border: 2px solid var(--secondary-font-color);
   color: var(--primary-font-color);
-  padding: 6px;
+  padding: .7vw;
   z-index: 1;
   transition: all 0.2s ease-in;
 }
@@ -184,7 +185,6 @@ footer > p {
 
 /* About Section */
 #about-section {
-  overflow: hidden;
   display: flex;
   gap: 2rem;
   padding-inline: clamp(2rem, 3rem, 100px);
@@ -201,14 +201,14 @@ footer > p {
   color: var(--secondary-font-color);
 }
 
-#about-section .info-container button {
+/* #about-section .info-container button {
   transition: all 0.2s ease-in;
 }
 
 #about-section .info-container button:hover {
   background-color: var(--secondary-font-color);
   color: #212121;
-}
+} */
 
 #about-section .info-container h1 {
   color: var(--primary-font-color);
@@ -220,13 +220,16 @@ footer > p {
 }
 
 #about-section .info-container p {
-  margin: 12lvh 0;
+  margin: 5vh 0;
+  font-size: calc(2.5vw - 12px);
 }
 
 #about-section .info-container a {
+  font-size: calc(2.5vw - 12px);
   text-decoration: none;
   background: transparent;
-  padding: 7px 12px;
+  padding: 12px 24px;
+  margin-right: 1.25vw;
   color: var(--secondary-font-color);
   border: 1.25px solid var(--secondary-font-color);
   transition: all 0.4s ease-out;
@@ -495,7 +498,6 @@ footer > p {
 }
 
 .right-block img {
-  border: 1px solid red;
   height: 70vh;
   max-width: 34vw;
   object-fit: cover;
