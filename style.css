@@ -87,12 +87,13 @@ a:hover {
 }
 
 .main-intro h1 {
-  font-size: min(5.25vw + 18px, 16rem);
+  font-size: min(5.4vw + 18px, 16rem);
   margin-top: -12px;
 }
 
 .main-intro p {
   font-size: min(1vw + 12px, 4rem);
+  margin-bottom: 2vh;
 }
 
 .learn-more button {
@@ -611,7 +612,7 @@ footer > p {
   #ecllipse1 {
     transform: scale(1.25);
     position: relative;
-    top: 12vh;
+    top: 8vh;
     left: 42px;
     z-index: -999;
   }
@@ -628,42 +629,30 @@ footer > p {
     transform: scale(1.25);
     top: auto;
     bottom: 6vh;
-    left: 12px;
+    right: 44vw;
     z-index: -999;
   }
 
   /* Home Section */
   #home-section h1 {
     padding: 5px;
-    width: 360px;
-    font-size: 30vw;
-    position: relative;
-    left: 0;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%);
+    width: fit-content;
+    font-size: 28vw;
   }
   .main-intro {
     width: 98dvw;
-    min-height: fit-content;
-    position: fixed;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%);
+    min-height: 40vh;
+    position: relative;
+    top: -10%;
     padding: 12px;
   }
-
-  #home-section p {
-    position: relative;
-    bottom: 12px;
-    font-size: 1.2rem;
-    padding-inline: 5px;
-  }
-
   #home-section button {
     position: fixed;
-    bottom: 100px;
-    left: 10%;
+    bottom: calc(110px + 2.25dvw);
+    left: calc(10px + 5%);
     transform: scale(1.5);
     border: 2px solid;
+    backdrop-filter: blur(6px);
   }
 
   /* About Section */
