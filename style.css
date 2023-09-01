@@ -39,7 +39,7 @@ body {
 /* Navigation Styling */
 nav {
   max-width: 1440px;
-  height: clamp(2rem, 4rem, 114px);
+  height: fit-content;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -50,13 +50,14 @@ nav {
 nav #home-link {
   margin-right: auto;
   font-size: 1.25rem;
+  font-size: clamp(16px, 1vw, 10rem);
 }
 
 nav .link {
   color: var(--primary-font-color);
   text-decoration: none;
   margin: 30px;
-  font-size: clamp(0.7rem, 1rem, 32px);
+  font-size: clamp(16px, 1vw, 10rem);
   font-weight: 500;
   z-index: 9;
 }
@@ -113,16 +114,17 @@ a:hover {
 
 /* Links */
 .social-links {
-  width: min-content;
+  width: fit-content;
   position: absolute;
   bottom: 2vh;
   left: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(4, 50px);
+  gap: 2vw;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .social-links img {
-  width: 25px;
+  width:  min(2vw, 7rem);
   backdrop-filter: multiply;
   filter: brightness(0) invert(1);
 }
@@ -166,12 +168,12 @@ footer {
   align-items: center;
   position: fixed;
   right: 10px;
-  bottom: 24px;
+  bottom: 4.75vw;
   transform: rotate(90deg);
 }
 
 footer > h2 {
-  font-size: 16px;
+  font-size: min(1.25vw, 7rem);
   font-weight: 400;
 }
 
@@ -245,11 +247,11 @@ footer > p {
 #projects-section .article-image {
   position: relative;
   right: 0;
-  width: 700px;
+  width: 60vw;
   height: 90dvh;
 }
 #projects-section img {
-  width: 700px;
+  width: 100%;
   height: 90dvh;
   object-fit: cover;
   object-position: center;
@@ -263,15 +265,17 @@ footer > p {
 }
 
 #projects-section .navigation-buttons button {
-  width: 30px;
-  height: 30px;
+  width: 3.25vw;
+  aspect-ratio: 1;
+  font-size: min(2vw, 7rem);
 }
 
 #projects-section  a {
-  width: max-content;
+  width: fit-content;
+  font-size: clamp(30px, 2.25vw, 30rem);
   color: black;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 1vw 2.5vw;
   border: none;
   background-color: var(--secondary-font-color);
   border-radius: none;
@@ -287,12 +291,16 @@ footer > p {
 }
 
 #projects-section .info h1 {
+  font-size: clamp(50px, 3.25vw, 50rem);
   color: var(--secondary-font-color);
   margin-left: 2rem;
 }
 
 
 #projects-section .article-image .article-intro {
+  border: 2px solid red;
+  width: 100%;
+  font-size: clamp(20px, 2vw, 20rem);
   display: flex;
   align-items: center;
   gap: 3rem;
