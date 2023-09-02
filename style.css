@@ -302,7 +302,6 @@ footer > p {
 
 
 #projects-section .article-image .article-intro {
-  border: 2px solid red;
   width: 100%;
   font-size: clamp(20px, 2vw, 20rem);
   display: flex;
@@ -536,6 +535,10 @@ footer > p {
     overflow: hidden;
   }
 
+  .social-links {
+    display: none;
+  }
+
   nav {
     max-width: clamp(300px, 98vw, 600px); /* Responsive max-width */
     background-color: #323232;
@@ -706,11 +709,84 @@ footer > p {
   .prev-button .material-symbols-outlined,
   .next-button .material-symbols-outlined {
     position: relative;
-    top: 10vh;
     color: var(--secondary-font-color);
     background-color: #212121;
     border-radius: 50px;
+  }
 
+  /* Projects Section */
+  #projects-section {
+    width: 100vw;
+  }
+
+  #projects-section .info {
+    width: 100dvw;
+    height: 26vh;
+    position: absolute;
+    z-index: 2;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12%;
+    padding: 1rem;
+  }
+
+  #projects-section #blog-title {
+    border: 1px solid blue;
+    width: 90%;
+    position: relative;
+    inset: 2vh 5%;
+    font-size: min(5rem, 6vw);
+    font-weight: 700;
+    color: var(--secondary-font-color);
+    z-index: 5;
+  }
+
+  #projects-section #read-more-btn {
+    position: absolute;
+    bottom: 5vh;
+    padding: 1.25vw 2vw;
+    font-size: calc(16px + 1vw);
+    font-weight: 500;
+    background-color: var(--primary-font-color);
+    border-radius: 12px;
+  }
+
+  .image {
+    position: fixed;
+    inset: 0;
+    height: 64vh;
+    width: 100%; /* Ensure the container takes up the full width */
+    border: 2px solid red;
+    overflow: hidden;
+    display: flex; /* Add a flex container for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .image img {
+    max-height: 100%;
+    max-width: 100%; /* Ensure the image does not exceed the container's size */
+    object-fit: cover; /* Maintain aspect ratio and fit inside the container */
+    object-position: center;
+  }
+
+  .article-intro {
+    position: absolute;
+  }
+
+  #blog-number {
+    position: fixed;
+    top: -10vw;
+    left: -60%;
+  }
+
+  #projects-section > footer {
+    display: none;
+  }
+
+  .social-links {
+    display: none;
   }
 
 }
