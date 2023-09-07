@@ -57,25 +57,24 @@ window.addEventListener('load', function() {
 });
 
 
-// Define an array of blog posts
 const blogPosts = [
   {
-    title: 'Elevating my Portrait Drawing Skills through AI-Generated Art',
-    description: '"Unlocking my artistic potential, I harness AI-generated art to enhance my portrait-drawing skills and explore boundless creativity."',
-    imagePath: 'images/thumbnails/illustration.png',
-    link: 'https://vl-fanai.blogspot.com/2023/06/elevating-my-portrait-drawing-skills.html'
+    title: 'Bootstrap Shopping Website',
+    description: '"Elegant and fully Responsive Online Fashion Site using Bootstrap 5."',
+    imagePath: 'images/thumbnails/bootstrap-project-1.2-thumbnail.png',
+    link: 'projects_folder/projects-bootstrap/shopping-site/site.html'
   },
   {
-    title: 'Starting a Blog for Reflection and Accountability: Overcoming Procrastination and Embracing Imperfection',
-    description: '"This is another blog post description."',
-    imagePath: 'images/thumbnails/Man__dark-bg.jpeg',
-    link: 'https://vl-fanai.blogspot.com/2023/04/why-i-finally-decided-to-start-writing.html'
+    title: '',
+    description: '',
+    imagePath: 'https://images.unsplash.com/photo-1509266272358-7701da638078?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ym9va3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60',
+    link: ''
   },
   {
-    title: 'This is the third blog',
-    description: '"This is the third blog post description."',
-    imagePath: 'images/thumbnails/Man__dark-bg.jpeg',
-    link: 'https://vl-fanai.blogspot.com/2023/04/ai-will-not-replacr-your-job-people-who.html'
+    title: '',
+    description: '',
+    imagePath: 'https://images.unsplash.com/photo-1505563480588-ca7375d17e0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1pbmltYWwlMjBhYnN0cmFjdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60',
+    link: ''
   },
   // Add more blog posts as needed
 ];
