@@ -720,9 +720,10 @@ opacity: 0.8;
     font-size: 4vw;
     position: absolute;
     display: flex;
-    top: calc(60vh + 15px);
+    top: calc(57vh + 15px);
     left: 0;
     z-index: 9;
+    text-shadow: 2px 2px 10px black;
   }
   .caption a {
     font-size: clamp(0.5rem, 16px, 5vw);
